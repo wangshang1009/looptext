@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loop</title>
+</head>
+<body>
+   <p id="demo"></p>
+    <script>
+    var text = "Hi! my name is Peter and Peter am a funny guy!";
+    var myName = "Peter";
+    var hits = [];
+    for(var i = 0; i<text.length;i++){
+    if(text[i]=== "P"){
+        for(var j = i; j<(myName.length + i);j++){
+            hits.push(text[j]);
+            }
+        }
+    }
+    if(hits.length ===0){
+       domcument.getElementById('demo').innerHTML = "Your name was not found!";
+        }else{
+        document.getElementById("demo").innerHTML = hits;
+            }
+/*j<(myName.length + i)為什麼要+i??
+當第一個迴圈碰到"P"的時候會執行第二個迴圈為了把完整的"Peter"顯示出來,而這個字串"Peter"的長度是5,這時候的i是在"P"這個位置,所以往後加5就剛好可以把完整的Peter顯示出來,而且也是stop的點,代表第二回圈結束繼續跑第一迴圈*/
+    
+    
+    </script>
+</body>
+</html>
